@@ -32,7 +32,7 @@ async def on_message(message):
             fx_link = link.replace('https://x.com/', 'https://fxtwitter.com/')
 
         await message.delete()
-        await message.channel.send(f"{fx_link} \nFrom: {message.author.mention}")
+        await message.channel.send(f"From: {message.author.mention} \n{fx_link}")
 
 webserver.keep_alive()
 client.run(TOKEN)
